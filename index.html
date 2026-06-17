@@ -1,0 +1,754 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="ayodev.tech is the portfolio of Ayodele, a product designer, developer, and founder building AI-native tools and digital infrastructure for the African market."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Moyebi Ayodele Oluwasegun" />
+    <meta name="theme-color" content="#f4f4f2" />
+    <link rel="canonical" href="https://ayodev.tech/" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ayodev.tech" />
+    <meta property="og:title" content="ayodev.tech - Product Designer, Developer, Founder" />
+    <meta
+      property="og:description"
+      content="Portfolio of Ayodele, a product designer, developer, and founder building AI-native tools and digital infrastructure for the African market."
+    />
+    <meta property="og:url" content="https://ayodev.tech/" />
+    <meta property="og:image" content="https://ayodev.tech/assets/ayodele-personal-logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:image:alt" content="ayodev.tech logo" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="ayodev.tech - Product Designer, Developer, Founder" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Ayodele, a product designer, developer, and founder building AI-native tools and digital infrastructure for the African market."
+    />
+    <meta name="twitter:image" content="https://ayodev.tech/assets/ayodele-personal-logo.png" />
+    <meta name="twitter:image:alt" content="ayodev.tech logo" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Moyebi Ayodele Oluwasegun",
+        "alternateName": "Ayodele",
+        "url": "https://ayodev.tech/",
+        "email": "mailto:me@ayodev.tech",
+        "jobTitle": "Product Designer, Developer, and Founder",
+        "description": "Product designer, developer, and founder building AI-native tools and digital infrastructure for the African market.",
+        "sameAs": [
+          "https://github.com/MoyebiAyo",
+          "https://web.facebook.com/moyebi.ayodele/",
+          "https://www.instagram.com/ayothedesigner_/"
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "ayodev.tech",
+        "url": "https://ayodev.tech/",
+        "publisher": {
+          "@type": "Person",
+          "name": "Moyebi Ayodele Oluwasegun"
+        }
+      }
+    </script>
+    <title>ayodev.tech - Product Designer, Developer, Founder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Ayodele home">
+        <img src="assets/ayodele-personal-logo.png" alt="" />
+        <span>ayodev.tech</span>
+      </a>
+      <nav>
+        <a href="#about">About</a>
+        <span aria-hidden="true">·</span>
+        <a href="#projects">Projects</a>
+        <span aria-hidden="true">·</span>
+        <a href="#stack">Stack</a>
+      </nav>
+      <div class="nav-actions" aria-label="Social links">
+        <a href="https://github.com/MoyebiAyo" aria-label="GitHub">
+          <img src="assets/logos/github.svg" alt="" />
+        </a>
+        <a href="https://web.facebook.com/moyebi.ayodele/" aria-label="Facebook">
+          <img src="assets/logos/facebook.svg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/ayothedesigner_/" aria-label="Instagram">
+          <img src="assets/logos/instagram.svg" alt="" />
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section">
+        <div class="availability">
+          <img src="assets/logos/gmail.svg" alt="" />
+          <span>Email me - got a project in mind?</span>
+          <b aria-hidden="true">·</b>
+          <a href="mailto:me@ayodev.tech">
+            Let's talk
+            <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="trust-module" data-testimonials>
+          <button
+            class="trust-pill"
+            type="button"
+            aria-expanded="false"
+            aria-controls="testimonial-popover"
+            data-trust-toggle
+          >
+            <span class="trust-faces" aria-hidden="true">
+              <span class="avatar">
+                <img src="assets/testimonials/apostle-turner-correct.png" alt="" />
+              </span>
+              <span class="avatar">
+                <img src="assets/testimonials/zahthic-ceo.png" alt="" />
+              </span>
+              <span class="avatar">
+                <img src="assets/testimonials/google-client-correct.png" alt="" />
+              </span>
+            </span>
+            <strong>Trusted by clients Worldwide</strong>
+          </button>
+
+          <div class="testimonial-popover" id="testimonial-popover" hidden data-testimonial-popover>
+            <div class="testimonial-card" role="dialog" aria-modal="false" aria-label="Client testimonials">
+              <div class="testimonial-card-top">
+                <div class="testimonial-avatar-rail" aria-label="Choose testimonial">
+                  <button class="active" type="button" aria-label="Show _apostleturner testimonial" data-testimonial-dot="0">
+                    <img src="assets/testimonials/apostle-turner-correct.png" alt="" />
+                  </button>
+                  <button type="button" aria-label="Show PT Cosmas Harrison testimonial" data-testimonial-dot="1">
+                    <img src="assets/testimonials/zahthic-ceo.png" alt="" />
+                  </button>
+                  <button type="button" aria-label="Show Google client testimonial" data-testimonial-dot="2">
+                    <img src="assets/testimonials/google-client-correct.png" alt="" />
+                  </button>
+                </div>
+                <button class="testimonial-close" type="button" aria-label="Close testimonials" data-testimonial-close>
+                  <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                    <path d="m6 6 12 12" />
+                    <path d="m18 6-12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="testimonial-stage">
+                <article class="active" data-testimonial-panel>
+                  <span class="review-brand"><img class="fiverr-logo" src="assets/logos/fiverr-round.png" alt="" /> ★★★★★</span>
+                  <strong>Exceeded expectations.</strong>
+                  <p>
+                    "Awesome job. You exceeded my expectations. Your attention to detail
+                    and design eye were great. I was surprised by how quickly the job was done."
+                  </p>
+                  <b>_apostleturner</b>
+                </article>
+                <article data-testimonial-panel>
+                  <span class="review-brand"><img class="fiverr-logo" src="assets/logos/fiverr-round.png" alt="" /> ★★★★★</span>
+                  <strong>Exceptional from start to finish.</strong>
+                  <p>
+                    "The developer demonstrated a rare combination of technical skill,
+                    clarity of thought, and professional discipline. He translated our
+                    vision into a clean, functional, and well-structured website that
+                    accurately represents our brand identity."
+                  </p>
+                  <p>
+                    "Communication was consistent and professional throughout the project.
+                    The final result reflects a developer who understands both design and
+                    user experience at a high level."
+                  </p>
+                  <b>PT Cosmas Harrison Ifeanyichukwu, Zahthic Healthcare Solutions</b>
+                </article>
+                <article data-testimonial-panel>
+                  <span class="review-brand"><img src="assets/logos/google-color.svg" alt="" /> ★★★★★</span>
+                  <strong>Trusted delivery</strong>
+                  <p>
+                    Strategic suggestions, precise feedback handling, and clean execution
+                    for businesses that need a stronger digital presence.
+                  </p>
+                  <b>Google client</b>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h1>I build products Africans enjoy using.</h1>
+        <p class="hero-copy">
+          ayodev.tech - Product designer, developer, and founder building AI-native
+          tools and digital infrastructure for the African market.
+        </p>
+        <a
+          class="cta"
+          href="https://wa.me/2348078933943?text=Hi%20Ayodele%2C%20I%20saw%20your%20portfolio%20on%20ayodev.tech%20and%20I%27d%20like%20to%20talk%20about%20a%20project."
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Reach out
+          <span aria-hidden="true">
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M5 12h14" />
+              <path d="m13 6 6 6-6 6" />
+            </svg>
+          </span>
+        </a>
+
+        <div class="hero-points" aria-label="Service highlights">
+          <article>
+            <span class="point-icon blue" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M21 12a9 9 0 0 1-9 9 8.8 8.8 0 0 1-6.3-2.7" />
+                <path d="M3 12a9 9 0 0 1 15.3-6.3" />
+                <path d="M3 19v-5h5" />
+                <path d="M21 5v5h-5" />
+              </svg>
+            </span>
+            <h2>Agile Development</h2>
+            <p>Fast cycles, tight feedback, features that ship without setbacks.</p>
+          </article>
+          <article>
+            <span class="point-icon green" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="M9 12.5 11.5 15 16 9.5" />
+                <path d="M12 3.5 19.5 7v5.5c0 4.3-3.1 7.1-7.5 8-4.4-.9-7.5-3.7-7.5-8V7z" />
+              </svg>
+            </span>
+            <h2>Clean Codebase</h2>
+            <p>Structured, readable code that scales, hands off, and holds up.</p>
+          </article>
+          <article>
+            <span class="point-icon violet" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24">
+                <path d="m8 8-4 4 4 4" />
+                <path d="m16 8 4 4-4 4" />
+                <path d="m14 5-4 14" />
+              </svg>
+            </span>
+            <h2>Sprint Delivery</h2>
+            <p>Focused sprints, clear milestones, every delivery on schedule.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-label about-label" aria-hidden="true"><span></span><b><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 5h16" /><path d="M4 12h16" /><path d="M4 19h10" /></svg> About me</b><span></span></div>
+
+      <section id="about" class="section intro">
+        <h2>More Than Just What I Build</h2>
+        <p class="section-copy">
+          Tech is my craft, and solving real African problems is my greatest obsession.
+        </p>
+
+        <div class="bio-card-wrap">
+          <div class="stamp" aria-hidden="true">
+            <img src="assets/red-wax-seal-transparent.png" alt="" />
+          </div>
+          <article class="bio-card">
+            <header>
+              <img
+                class="founder-photo"
+                src="assets/founder-portrait.png"
+                alt="Portrait of Moyebi Ayodele Oluwasegun"
+                loading="lazy"
+                decoding="async"
+              />
+              <div>
+                <h3>Founder / Developer</h3>
+                <p>Moyebi Ayodele Oluwasegun</p>
+              </div>
+            </header>
+            <p>
+              My name is Ayodele, a fullstack developer and product founder based in Abuja
+              with a deep focus on both the frontend and backend. I work with Next.js,
+              React Native, and Supabase, but where I truly come alive is in the details
+              of a product that actually works for real people.
+            </p>
+            <p>
+              It started with a question: why don't Africans have event tech that works
+              for them, not against them? That question led me to build
+              <a href="https://theeventpass.com/">EventPass</a>, and I haven't stopped building since.
+            </p>
+            <p>
+              For me it's always been about the craft. The experiences that feel right,
+              the interfaces people use without thinking. That obsession is what shapes
+              every product I touch, from Nera's hyperlocal commerce flows to the client
+              sites we ship at Mouse Technologies.
+            </p>
+            <p>
+              I'm open to meaningful collaborations. If you're building something that
+              matters for Africa, I'd love to be part of it.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <div class="section-label about-label stack-label"><span></span><b><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 3v18" /><path d="M4.5 7.5h15" /><path d="M6 16.5h12" /><path d="m8 3 4 4 4-4" /></svg> Technologies</b><span></span></div>
+
+      <section id="stack" class="feature-card stack-card">
+        <h2>The tools I use to turn ideas into reality.</h2>
+        <p>
+          From frontend frameworks to backend services, here's a look at
+          the technologies I work with.
+        </p>
+
+        <div class="logo-marquee" aria-label="Technology stack">
+          <div class="logo-track">
+            <img src="assets/logos/npm.svg" alt="npm" />
+            <img src="assets/logos/postman.svg" alt="Postman" />
+            <img src="assets/logos/git.svg" alt="Git" />
+            <img src="assets/logos/vercel.svg" alt="Vercel" />
+            <img src="assets/logos/html5.svg" alt="HTML5" />
+            <img src="assets/logos/tailwind.svg" alt="Tailwind CSS" />
+            <img src="assets/logos/javascript.svg" alt="JavaScript" />
+            <img src="assets/logos/paystack.svg" alt="Paystack" />
+            <img src="assets/logos/nextjs.svg" alt="Next.js" />
+            <img src="assets/logos/reactnative.svg" alt="React Native" />
+            <img src="assets/logos/supabase.svg" alt="Supabase" />
+            <img src="assets/logos/django.svg" alt="Django" />
+            <img src="assets/logos/nodejs.svg" alt="Node.js" />
+            <img src="assets/logos/claude.svg" alt="Claude AI" />
+            <img src="assets/logos/figma.svg" alt="Figma" />
+            <img src="assets/logos/resend.svg" alt="Resend" />
+            <img src="assets/logos/cloudflare.svg" alt="Cloudflare" />
+            <img src="assets/logos/typescript.svg" alt="TypeScript" />
+            <img src="assets/logos/postgresql.svg" alt="PostgreSQL" />
+            <img src="assets/logos/expo.svg" alt="Expo" />
+          </div>
+          <div class="logo-track" aria-hidden="true">
+            <img src="assets/logos/npm.svg" alt="" />
+            <img src="assets/logos/postman.svg" alt="" />
+            <img src="assets/logos/git.svg" alt="" />
+            <img src="assets/logos/vercel.svg" alt="" />
+            <img src="assets/logos/html5.svg" alt="" />
+            <img src="assets/logos/tailwind.svg" alt="" />
+            <img src="assets/logos/javascript.svg" alt="" />
+            <img src="assets/logos/paystack.svg" alt="" />
+            <img src="assets/logos/nextjs.svg" alt="" />
+            <img src="assets/logos/reactnative.svg" alt="" />
+            <img src="assets/logos/supabase.svg" alt="" />
+            <img src="assets/logos/django.svg" alt="" />
+            <img src="assets/logos/nodejs.svg" alt="" />
+            <img src="assets/logos/claude.svg" alt="" />
+            <img src="assets/logos/figma.svg" alt="" />
+            <img src="assets/logos/resend.svg" alt="" />
+            <img src="assets/logos/cloudflare.svg" alt="" />
+            <img src="assets/logos/typescript.svg" alt="" />
+            <img src="assets/logos/postgresql.svg" alt="" />
+            <img src="assets/logos/expo.svg" alt="" />
+          </div>
+        </div>
+
+        <p class="tiny-note">
+          Every tool mastered is a problem solved before it begins.
+        </p>
+        <div class="ratings">
+          <span><img src="assets/logos/google-color.svg" alt="" /> 5.0 <b>★★★★★</b></span>
+          <span><img class="fiverr-logo" src="assets/logos/fiverr-round.png" alt="" /> 5.0 <b>★★★★★</b></span>
+        </div>
+      </section>
+
+      <div id="ethics" class="section-label about-label ethics-label"><span></span><b><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 3 19.5 7v5.5c0 4.3-3.1 7.1-7.5 8-4.4-.9-7.5-3.7-7.5-8V7z" /><path d="m9 12 2 2 4-4" /></svg> Code ethics</b><span></span></div>
+
+      <section class="section ethics">
+        <h2>Every line of code written with intention.</h2>
+        <p class="section-copy">
+          These aren't checkboxes - they're the standards I hold myself to on every project I build.
+        </p>
+
+        <div class="ethics-grid">
+          <article>
+            <span class="mini-icon blue" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 7h14" /><path d="M5 17h14" /><path d="M7 5v14" /><path d="M17 5v14" /></svg>
+            </span>
+            <h3>Responsive</h3>
+            <p>Fluid across every screen, desktop and mobile devices.</p>
+          </article>
+          <article>
+            <span class="mini-icon orange" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18" /><path d="M3 12h18" /><path d="m5.5 5.5 13 13" /><path d="m18.5 5.5-13 13" /></svg>
+            </span>
+            <h3>Accessible</h3>
+            <p>WCAG-compliant design. Built for everyone, no exceptions.</p>
+          </article>
+          <article>
+            <span class="mini-icon green" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 4 21 20H3z" /><path d="M12 10v4" /><path d="M12 17h.01" /></svg>
+            </span>
+            <h3>Production Ready</h3>
+            <p>Stable, scalable, and pre-optimized before shipping.</p>
+          </article>
+          <article>
+            <span class="mini-icon violet" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 7V5h16v2" /><path d="M12 5v14" /><path d="M8 19h8" /></svg>
+            </span>
+            <h3>Type Safe</h3>
+            <p>Solid typing to prevent errors before they go live.</p>
+          </article>
+          <article>
+            <span class="mini-icon coral" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /><path d="M20 12a8 8 0 1 1-3-6.2" /></svg>
+            </span>
+            <h3>Well Tested</h3>
+            <p>Confidence through coverage. Nothing left unchecked.</p>
+          </article>
+          <article>
+            <span class="mini-icon gold" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M13 3 5 14h6l-1 7 8-11h-6z" /></svg>
+            </span>
+            <h3>Performant</h3>
+            <p>Fast by design, versatile for multi-device compatibility.</p>
+          </article>
+        </div>
+        <div class="ratings">
+          <span><img src="assets/logos/google-color.svg" alt="" /> 5.0 <b>★★★★★</b></span>
+          <span><img class="fiverr-logo" src="assets/logos/fiverr-round.png" alt="" /> 5.0 <b>★★★★★</b></span>
+        </div>
+      </section>
+
+      <div class="section-label about-label project-label"><span></span><b><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M5 5h14v14H5z" /><path d="M9 9h6v6H9z" /></svg> Project</b><span></span></div>
+
+      <section id="projects" class="feature-card project-card">
+        <h2>EventPass Is My Most Significant Build.</h2>
+        <p>
+          We help African event organizers run profitable, well-managed events with
+          AI-powered tools and seamless ticketing.
+        </p>
+        <a class="text-link project-link" href="https://theeventpass.com/">
+          Project Link
+          <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M7 17 17 7" />
+            <path d="M9 7h8v8" />
+          </svg>
+        </a>
+
+        <div class="project-showcase">
+          <aside>
+            <b>Event infrastructure</b>
+            <p>Launch events, sell tickets, manage attendees, and track performance from one clean dashboard.</p>
+          </aside>
+          <div class="phone" aria-label="EventPass app mockup">
+            <div class="phone-bar"></div>
+            <div class="phone-screen">
+              <img
+                src="assets/projects/eventpass-mobile.jpg"
+                alt="Mobile screenshot of the EventPass website"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+          <aside>
+            <b>AI-powered operations</b>
+            <p>Help organizers move faster with AI tools, smooth check-ins, and data they can trust.</p>
+          </aside>
+        </div>
+      </section>
+
+      <div class="section-label about-label showcase-label"><span></span><b><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M4 6h16" /><path d="M4 12h10" /><path d="M4 18h16" /><path d="m17 10 3 2-3 2z" /></svg> Project showcase</b><span></span></div>
+
+      <section id="showcase" class="section project-gallery" aria-labelledby="showcase-title">
+        <h2 id="showcase-title">Selected Projects, Shown Live.</h2>
+        <p class="section-copy">
+          A closer look at the products and client sites I've shipped across events, healthcare, and construction.
+        </p>
+
+        <div class="showcase-window" data-project-carousel>
+          <div class="showcase-tabs" aria-hidden="true">
+            <span class="active">&lt;/&gt; project-showcase.tsx</span>
+            <span>&lt;/&gt; client-sites.css</span>
+            <span><svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z" /></svg> Preview</span>
+          </div>
+
+          <div class="showcase-body">
+            <div class="showcase-code" aria-hidden="true">
+              <ol>
+                <li><span>const</span> projects = [</li>
+                <li>  { title: <b>"EventPass"</b>,</li>
+                <li>    type: <b>"AI event ticketing"</b>,</li>
+                <li>    market: <b>"Africa"</b> },</li>
+                <li>  { title: <b>"Zahthic"</b>,</li>
+                <li>    type: <b>"Healthcare website"</b> },</li>
+                <li>  { title: <b>"Philsan Construct"</b>,</li>
+                <li>    type: <b>"Construction presence"</b> }</li>
+                <li>];</li>
+              </ol>
+            </div>
+
+            <div class="showcase-preview">
+              <button class="carousel-arrow prev" type="button" aria-label="Previous project" data-project-prev>
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="m15 18-6-6 6-6" />
+                </svg>
+              </button>
+              <div class="project-track" data-project-track>
+                <article class="project-slide">
+                  <img src="assets/projects/eventpass.png" alt="EventPass website screenshot" />
+                  <div>
+                    <strong>EventPass</strong>
+                    <a href="https://theeventpass.com/">theeventpass.com</a>
+                  </div>
+                </article>
+                <article class="project-slide">
+                  <img src="assets/projects/zahthic.png" alt="Zahthic website screenshot" />
+                  <div>
+                    <strong>Zahthic Healthcare</strong>
+                    <a href="https://zahthic.com/">zahthic.com</a>
+                  </div>
+                </article>
+                <article class="project-slide">
+                  <img src="assets/projects/philsanconstruct.png" alt="Philsan Construct website screenshot" />
+                  <div>
+                    <strong>Philsan Construct</strong>
+                    <a href="https://philsanconstruct.com/">philsanconstruct.com</a>
+                  </div>
+                </article>
+              </div>
+              <button class="carousel-arrow next" type="button" aria-label="Next project" data-project-next>
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </button>
+              <div class="project-dots" aria-label="Project carousel position" data-project-dots>
+                <button class="active" type="button" aria-label="Show EventPass" data-project-dot="0"></button>
+                <button type="button" aria-label="Show Zahthic" data-project-dot="1"></button>
+                <button type="button" aria-label="Show Philsan Construct" data-project-dot="2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer id="footer">
+      <img src="assets/ayodele-personal-logo.png" alt="" />
+      <h2>Where clean code meets meaningful African products.</h2>
+      <div>
+        <a href="https://github.com/MoyebiAyo" aria-label="GitHub">
+          <img src="assets/logos/github.svg" alt="" />
+        </a>
+        <a href="https://web.facebook.com/moyebi.ayodele/" aria-label="Facebook">
+          <img src="assets/logos/facebook.svg" alt="" />
+        </a>
+        <a href="https://www.instagram.com/ayothedesigner_/" aria-label="Instagram">
+          <img src="assets/logos/instagram.svg" alt="" />
+        </a>
+      </div>
+      <p>© 2026 Moyebi Ayodele. All rights reserved.</p>
+      <strong aria-hidden="true">Ayodele</strong>
+      <a class="to-top" href="#top" aria-label="Back to top">
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="m6 15 6-6 6 6" />
+        </svg>
+      </a>
+    </footer>
+    <script>
+      (() => {
+        const module = document.querySelector("[data-testimonials]");
+        if (!module) return;
+
+        const toggle = module.querySelector("[data-trust-toggle]");
+        const popover = module.querySelector("[data-testimonial-popover]");
+        const card = module.querySelector(".testimonial-card");
+        const close = module.querySelector("[data-testimonial-close]");
+        const dots = Array.from(module.querySelectorAll("[data-testimonial-dot]"));
+        const panels = Array.from(module.querySelectorAll("[data-testimonial-panel]"));
+        const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+        let active = 0;
+        let cycleTimer;
+        let audioContext;
+
+        const playRollingPop = () => {
+          if (motionQuery.matches) return;
+
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContext) return;
+
+          audioContext ||= new AudioContext();
+          audioContext.resume();
+
+          const now = audioContext.currentTime;
+          const master = audioContext.createGain();
+          master.gain.setValueAtTime(0.001, now);
+          master.gain.exponentialRampToValueAtTime(0.22, now + 0.015);
+          master.gain.exponentialRampToValueAtTime(0.001, now + 0.46);
+          master.connect(audioContext.destination);
+
+          const blip = (offset, frequency, duration, type = "triangle") => {
+            const oscillator = audioContext.createOscillator();
+            const gain = audioContext.createGain();
+            const start = now + offset;
+            oscillator.type = type;
+            oscillator.frequency.setValueAtTime(frequency, start);
+            oscillator.frequency.exponentialRampToValueAtTime(frequency * 0.62, start + duration);
+            gain.gain.setValueAtTime(0.001, start);
+            gain.gain.exponentialRampToValueAtTime(0.18, start + 0.01);
+            gain.gain.exponentialRampToValueAtTime(0.001, start + duration);
+            oscillator.connect(gain);
+            gain.connect(master);
+            oscillator.start(start);
+            oscillator.stop(start + duration + 0.03);
+          };
+
+          blip(0, 190, 0.08);
+          blip(0.08, 240, 0.08);
+          blip(0.16, 310, 0.08);
+          blip(0.25, 120, 0.18, "sine");
+        };
+
+        const setActive = (index) => {
+          active = (index + panels.length) % panels.length;
+
+          panels.forEach((panel, panelIndex) => {
+            panel.classList.toggle("active", panelIndex === active);
+          });
+
+          dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle("active", dotIndex === active);
+            dot.setAttribute("aria-current", dotIndex === active ? "true" : "false");
+          });
+        };
+
+        const startCycle = () => {
+          window.clearInterval(cycleTimer);
+          cycleTimer = window.setInterval(() => setActive(active + 1), 3600);
+        };
+
+        const openTestimonials = () => {
+          popover.hidden = false;
+          toggle.setAttribute("aria-expanded", "true");
+          module.classList.add("is-rolling");
+          popover.getBoundingClientRect();
+          module.classList.add("is-open");
+          card.classList.add("is-open");
+          card.style.opacity = "1";
+          card.style.transform = "translateY(0) scale(1) rotateX(0deg)";
+          playRollingPop();
+          startCycle();
+          window.setTimeout(() => module.classList.remove("is-rolling"), 620);
+        };
+
+        const closeTestimonials = () => {
+          module.classList.remove("is-open", "is-rolling");
+          card.classList.remove("is-open");
+          card.style.opacity = "0";
+          card.style.transform = "translateY(-18px) scale(0.88) rotateX(14deg)";
+          toggle.setAttribute("aria-expanded", "false");
+          window.clearInterval(cycleTimer);
+          popover.hidden = true;
+        };
+
+        toggle.addEventListener("click", () => {
+          if (module.classList.contains("is-open")) {
+            closeTestimonials();
+          } else {
+            openTestimonials();
+          }
+        });
+
+        close.addEventListener("click", closeTestimonials);
+
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            setActive(Number(dot.dataset.testimonialDot));
+            playRollingPop();
+            startCycle();
+          });
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && module.classList.contains("is-open")) {
+            closeTestimonials();
+            toggle.focus();
+          }
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!module.contains(event.target) && module.classList.contains("is-open")) {
+            closeTestimonials();
+          }
+        });
+
+        setActive(0);
+      })();
+
+      (() => {
+        const carousel = document.querySelector("[data-project-carousel]");
+        if (!carousel) return;
+
+        const slides = Array.from(carousel.querySelectorAll(".project-slide"));
+        const dots = Array.from(carousel.querySelectorAll("[data-project-dot]"));
+        const prev = carousel.querySelector("[data-project-prev]");
+        const next = carousel.querySelector("[data-project-next]");
+        let active = 0;
+        let timer;
+
+        const setActive = (index) => {
+          active = (index + slides.length) % slides.length;
+          const nextIndex = (active + 1) % slides.length;
+          const prevIndex = (active - 1 + slides.length) % slides.length;
+
+          slides.forEach((slide, slideIndex) => {
+            slide.classList.remove("active", "next", "prev", "hidden");
+            if (slideIndex === active) {
+              slide.classList.add("active");
+            } else if (slideIndex === nextIndex) {
+              slide.classList.add("next");
+            } else if (slideIndex === prevIndex) {
+              slide.classList.add("prev");
+            } else {
+              slide.classList.add("hidden");
+            }
+          });
+
+          dots.forEach((dot, dotIndex) => {
+            dot.classList.toggle("active", dotIndex === active);
+            dot.setAttribute("aria-current", dotIndex === active ? "true" : "false");
+          });
+        };
+
+        const restart = () => {
+          window.clearInterval(timer);
+          timer = window.setInterval(() => setActive(active + 1), 4200);
+        };
+
+        prev.addEventListener("click", () => {
+          setActive(active - 1);
+          restart();
+        });
+
+        next.addEventListener("click", () => {
+          setActive(active + 1);
+          restart();
+        });
+
+        dots.forEach((dot) => {
+          dot.addEventListener("click", () => {
+            setActive(Number(dot.dataset.projectDot));
+            restart();
+          });
+        });
+
+        setActive(0);
+        restart();
+      })();
+    </script>
+  </body>
+</html>
