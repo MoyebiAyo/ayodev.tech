@@ -927,7 +927,6 @@ h2 {
 
 .bio-card {
   position: relative;
-  max-height: 632px;
   margin: 0;
   padding: 44px 42px 50px;
   border: 1px solid #d7dbe2;
@@ -944,18 +943,6 @@ h2 {
   inset: 9px;
   border: 1px dashed #d8dce3;
   border-radius: 12px;
-  pointer-events: none;
-}
-
-.bio-card::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 142px;
-  border-radius: 0 0 17px 17px;
-  background: linear-gradient(rgba(255, 253, 249, 0), #fffdf9 68%, #fffdf9);
   pointer-events: none;
 }
 
@@ -2007,14 +1994,8 @@ footer strong {
   }
 
   .bio-card {
-    max-height: 560px;
     padding: 28px 22px 32px;
     border-radius: 13px;
-  }
-
-  .bio-card::after {
-    height: 132px;
-    border-radius: 0 0 13px 13px;
   }
 
   .stamp {
