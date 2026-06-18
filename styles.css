@@ -497,6 +497,19 @@ footer div img {
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
 }
 
+.proof-link {
+  width: fit-content;
+  color: #4a4640;
+}
+
+.proof-link::after {
+  content: "open";
+  color: #0f766e;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
 .review-brand img {
   width: 18px;
   height: 18px;
@@ -1161,7 +1174,8 @@ h2 {
   color: #85817b;
 }
 
-.ratings span {
+.ratings span,
+.ratings a {
   display: inline-flex;
   align-items: center;
   gap: 7px;
@@ -1169,9 +1183,11 @@ h2 {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: #fff;
+  color: inherit;
 }
 
-.stack-card .ratings span {
+.stack-card .ratings span,
+.stack-card .ratings a {
   padding: 0;
   border: 0;
   background: transparent;
