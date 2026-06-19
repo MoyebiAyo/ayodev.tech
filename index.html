@@ -77,6 +77,8 @@
         <span aria-hidden="true">·</span>
         <a href="#projects">Projects</a>
         <span aria-hidden="true">·</span>
+        <a href="#pricing">Pricing</a>
+        <span aria-hidden="true">·</span>
         <a href="#stack">Stack</a>
       </nav>
       <div class="nav-actions" aria-label="Social links">
@@ -542,6 +544,105 @@
         </div>
       </section>
 
+      <div class="section-label about-label pricing-label"><span></span><b><svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14a3.5 3.5 0 0 1 0 7H6" /></svg> Pricing</b><span></span></div>
+
+      <section id="pricing" class="section pricing-section" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">Clear project packages for serious builds.</h2>
+        <p class="section-copy">
+          Pick the closest fit and I will use WhatsApp to confirm scope, timeline, and the cleanest way to ship.
+        </p>
+
+        <div class="pricing-grid">
+          <article class="price-card">
+            <span class="price-kicker">Starter</span>
+            <h3>250k</h3>
+            <p>Best for a polished single-page website, portfolio refresh, or focused landing page.</p>
+            <ul>
+              <li>Responsive landing page or portfolio section</li>
+              <li>Clean visual direction and content structure</li>
+              <li>Contact CTA setup with WhatsApp or email</li>
+              <li>Basic SEO, speed, and accessibility checks</li>
+            </ul>
+            <a class="package-cta" href="https://wa.me/2348078933943?text=Hi%20Ayodele%2C%20I%27m%20interested%20in%20the%20250k%20Starter%20package.%20I%27d%20like%20a%20polished%20single-page%20website%20or%20landing%20page." target="_blank" rel="noopener noreferrer">
+              Start with 250k
+              <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7" /><path d="M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="price-card featured">
+            <span class="price-kicker">Growth</span>
+            <h3>500k</h3>
+            <p>For brands that need a fuller website, stronger UX, and launch-ready pages with room to grow.</p>
+            <ul>
+              <li>Multi-section or small multi-page website</li>
+              <li>Custom UI design matched to your brand</li>
+              <li>Forms, analytics, and conversion CTAs</li>
+              <li>Deployment support and launch polish</li>
+            </ul>
+            <a class="package-cta" href="https://wa.me/2348078933943?text=Hi%20Ayodele%2C%20I%27m%20interested%20in%20the%20500k%20Growth%20package.%20I%27d%20like%20a%20fuller%20website%20with%20custom%20design%2C%20forms%2C%20analytics%2C%20and%20launch%20support." target="_blank" rel="noopener noreferrer">
+              Choose 500k
+              <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7" /><path d="M9 7h8v8" /></svg>
+            </a>
+          </article>
+
+          <article class="price-card">
+            <span class="price-kicker">Product</span>
+            <h3>1M+</h3>
+            <p>For custom web apps, dashboards, MVPs, and product builds that need backend logic.</p>
+            <ul>
+              <li>Product planning and feature scope</li>
+              <li>Frontend, backend, database, and auth flows</li>
+              <li>Payments, email, admin tools, or integrations</li>
+              <li>Testing, deployment, and post-launch handoff</li>
+            </ul>
+            <a class="package-cta" href="https://wa.me/2348078933943?text=Hi%20Ayodele%2C%20I%27m%20interested%20in%20the%201M%2B%20Product%20package.%20I%27d%20like%20to%20build%20a%20custom%20web%20app%2C%20dashboard%2C%20MVP%2C%20or%20product%20with%20backend%20logic." target="_blank" rel="noopener noreferrer">
+              Discuss 1M+
+              <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7" /><path d="M9 7h8v8" /></svg>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section id="hire" class="section hire-section" aria-labelledby="hire-title">
+        <div class="hire-copy">
+          <span class="price-kicker">Hire me</span>
+          <h2 id="hire-title">Tell me what you want to build.</h2>
+          <p>
+            Share the essentials and I will reply with the next best step. You will also receive a confirmation email.
+          </p>
+        </div>
+
+        <form class="hire-form" data-hire-form>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <label>
+            Name
+            <input type="text" name="name" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+          <label>
+            Package
+            <select name="package" required>
+              <option value="">Select a package</option>
+              <option>250k Starter</option>
+              <option>500k Growth</option>
+              <option>1M+ Product</option>
+            </select>
+          </label>
+          <label>
+            Project details
+            <textarea name="message" rows="5" placeholder="What are you building, and when do you want to launch?" required></textarea>
+          </label>
+          <button class="form-cta" type="submit">
+            Send project brief
+            <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="m22 2-7 20-4-9-9-4z" /></svg>
+          </button>
+          <p class="form-status" data-hire-status role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
     </main>
 
     <footer id="footer">
@@ -755,6 +856,45 @@
 
         setActive(0);
         restart();
+      })();
+
+      (() => {
+        const form = document.querySelector("[data-hire-form]");
+        if (!form) return;
+
+        const status = form.querySelector("[data-hire-status]");
+        const button = form.querySelector("button[type='submit']");
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          status.textContent = "";
+          button.disabled = true;
+          button.textContent = "Sending...";
+
+          const formData = new FormData(form);
+          const payload = Object.fromEntries(formData.entries());
+
+          try {
+            const response = await fetch("/api/hire", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify(payload)
+            });
+
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok) {
+              throw new Error(result.error || "Unable to send your message right now.");
+            }
+
+            form.reset();
+            status.textContent = "Sent. Check your inbox for the confirmation email.";
+          } catch (error) {
+            status.textContent = error.message || "Unable to send your message right now.";
+          } finally {
+            button.disabled = false;
+            button.innerHTML = 'Send project brief <svg class="icon icon-sm" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="m22 2-7 20-4-9-9-4z" /></svg>';
+          }
+        });
       })();
     </script>
   </body>

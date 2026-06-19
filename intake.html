@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#f4f4f2" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <title>Client Intake Form - ayodev.tech</title>
+    <link rel="stylesheet" href="styles.css?v=intake-form" />
+  </head>
+  <body class="intake-page">
+    <header class="intake-header">
+      <a class="brand" href="/" aria-label="Ayodev.tech home">
+        <img src="assets/ayodele-personal-logo.png" alt="ayodev.tech logo" />
+        <span>ayodev.tech</span>
+      </a>
+      <a class="intake-header-link" href="/">Back to site</a>
+    </header>
+
+    <main class="intake-shell">
+      <aside class="intake-progress" aria-label="Form progress">
+        <p class="price-kicker">Client intake</p>
+        <h1>Tell me about your website project.</h1>
+        <p>
+          This form is split into short sessions so you can move through it without feeling buried.
+        </p>
+        <ol data-step-list>
+          <li class="active">Project details</li>
+          <li>About you</li>
+          <li>Goals</li>
+          <li>Content</li>
+          <li>Design</li>
+          <li>Technical</li>
+          <li>Timeline</li>
+          <li>Final notes</li>
+        </ol>
+      </aside>
+
+      <form class="intake-form" data-intake-form novalidate>
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <section class="intake-step active" data-step="0" aria-labelledby="step-project">
+          <span class="step-count">01 / 08</span>
+          <h2 id="step-project">Project and admin details</h2>
+          <div class="field-grid two">
+            <label>
+              Date
+              <input type="date" name="date" />
+            </label>
+            <label>
+              Project code or ID
+              <input type="text" name="projectCode" placeholder="Optional" />
+            </label>
+            <label>
+              Client full name
+              <input type="text" name="clientName" autocomplete="name" required />
+            </label>
+            <label>
+              Business or brand name
+              <input type="text" name="brandName" required />
+            </label>
+            <label>
+              Client email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Phone number
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+            <label>
+              Preferred contact method
+              <select name="contactMethod" required>
+                <option value="">Select one</option>
+                <option>Email</option>
+                <option>WhatsApp</option>
+                <option>Call</option>
+                <option>Email and WhatsApp</option>
+              </select>
+            </label>
+            <label>
+              Referred by
+              <input type="text" name="referredBy" placeholder="How did you find Ayodev.tech?" />
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="1" aria-labelledby="step-about">
+          <span class="step-count">02 / 08</span>
+          <h2 id="step-about">About the client</h2>
+          <div class="field-grid two">
+            <label>
+              Profession or role
+              <input type="text" name="role" placeholder="Communication executive, trainer, founder..." />
+            </label>
+            <label>
+              Industry or niche
+              <input type="text" name="industry" />
+            </label>
+            <label class="span-2">
+              Short bio
+              <textarea name="bio" rows="4" placeholder="How should the website describe you or your business?"></textarea>
+            </label>
+            <label>
+              Location
+              <input type="text" name="location" placeholder="City, state, or country" />
+            </label>
+            <label>
+              Profile photo available?
+              <select name="profilePhoto">
+                <option value="">Select one</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>I will send a Google Drive link</option>
+                <option>Need help taking/selecting one</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="2" aria-labelledby="step-goals">
+          <span class="step-count">03 / 08</span>
+          <h2 id="step-goals">Website goals and audience</h2>
+          <div class="field-grid two">
+            <label>
+              Purpose of website
+              <select name="websitePurpose" required>
+                <option value="">Select one</option>
+                <option>Portfolio</option>
+                <option>Business website</option>
+                <option>Landing page</option>
+                <option>E-commerce</option>
+                <option>Web app or dashboard</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              Primary goal
+              <input type="text" name="primaryGoal" placeholder="Contact and hire, sell, book calls..." required />
+            </label>
+            <label class="span-2">
+              Target audience
+              <textarea name="targetAudience" rows="3" placeholder="Who should this website speak to?"></textarea>
+            </label>
+            <label class="span-2">
+              Competitors or inspiration
+              <textarea name="inspiration" rows="3" placeholder="Share websites you like or compete with."></textarea>
+            </label>
+            <label class="span-2">
+              Websites or styles to avoid
+              <textarea name="dislikes" rows="3" placeholder="What should the site not feel like?"></textarea>
+            </label>
+            <label class="span-2">
+              What would make this project a success?
+              <textarea name="successMetric" rows="3" placeholder="More leads, clearer brand, faster bookings, better trust..."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="3" aria-labelledby="step-content">
+          <span class="step-count">04 / 08</span>
+          <h2 id="step-content">Content and pages needed</h2>
+          <fieldset class="choice-grid">
+            <legend>Pages or sections needed</legend>
+            <label><input type="checkbox" name="pages" value="Home" /> Home</label>
+            <label><input type="checkbox" name="pages" value="About" /> About</label>
+            <label><input type="checkbox" name="pages" value="Portfolio" /> Portfolio</label>
+            <label><input type="checkbox" name="pages" value="Skills" /> Skills</label>
+            <label><input type="checkbox" name="pages" value="Services" /> Services</label>
+            <label><input type="checkbox" name="pages" value="Blog" /> Blog</label>
+            <label><input type="checkbox" name="pages" value="Contact" /> Contact</label>
+            <label><input type="checkbox" name="pages" value="Booking" /> Booking</label>
+          </fieldset>
+          <div class="field-grid two">
+            <label>
+              Portfolio or work samples
+              <textarea name="workSamples" rows="3" placeholder="Paste Google Drive links for images/videos/files, plus any live links or case study notes."></textarea>
+            </label>
+            <label>
+              Project descriptions
+              <textarea name="projectDescriptions" rows="3" placeholder="Titles, descriptions, roles, results."></textarea>
+            </label>
+            <label>
+              Testimonials
+              <textarea name="testimonials" rows="3" placeholder="Paste testimonial text or Google Drive links for videos, screenshots, and proof files."></textarea>
+            </label>
+            <label>
+              Content readiness
+              <select name="contentReadiness">
+                <option value="">Select one</option>
+                <option>I have all copy and images ready</option>
+                <option>I have some content ready</option>
+                <option>I need help writing content</option>
+              </select>
+            </label>
+            <label>
+              Client logos to show?
+              <select name="clientLogos">
+                <option value="">Select one</option>
+                <option>Yes, I will send a Google Drive link</option>
+                <option>No</option>
+                <option>Not sure</option>
+              </select>
+            </label>
+            <label>
+              Downloadable CV or resume?
+              <select name="resume">
+                <option value="">Select one</option>
+                <option>Yes, I will send a Google Drive link</option>
+                <option>No</option>
+                <option>Maybe later</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="4" aria-labelledby="step-design">
+          <span class="step-count">05 / 08</span>
+          <h2 id="step-design">Design and branding</h2>
+          <div class="field-grid two">
+            <label>
+              Do you have a logo?
+              <select name="logo">
+                <option value="">Select one</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Need a simple logo/mark</option>
+              </select>
+            </label>
+            <label>
+              Brand colors
+              <input type="text" name="brandColors" placeholder="Orange, purple, calm neutrals..." />
+            </label>
+            <label>
+              Preferred fonts
+              <input type="text" name="fonts" placeholder="Leave blank if I should choose" />
+            </label>
+            <label>
+              Overall vibe
+              <input type="text" name="vibe" placeholder="Elegant, corporate, bold, friendly..." />
+            </label>
+            <label>
+              Dark or light mode?
+              <select name="colorMode">
+                <option value="">Select one</option>
+                <option>Light</option>
+                <option>Dark</option>
+                <option>No preference</option>
+                <option>Both</option>
+              </select>
+            </label>
+            <label>
+              Existing style guide?
+              <select name="styleGuide">
+                <option value="">Select one</option>
+                <option>Yes, I will send a Google Drive link</option>
+                <option>No</option>
+                <option>Not sure</option>
+              </select>
+            </label>
+            <label class="span-2">
+              Reference websites
+              <textarea name="referenceWebsites" rows="3" placeholder="Paste links and say what you like about each one."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="5" aria-labelledby="step-technical">
+          <span class="step-count">06 / 08</span>
+          <h2 id="step-technical">Technical requirements</h2>
+          <div class="field-grid two">
+            <label>
+              Domain name
+              <input type="text" name="domain" placeholder="Existing domain or need help getting one?" />
+            </label>
+            <label>
+              CMS required?
+              <select name="cms">
+                <option value="">Select one</option>
+                <option>Yes, I want to update content myself</option>
+                <option>No</option>
+                <option>Not sure</option>
+              </select>
+            </label>
+            <label>
+              Contact form needed?
+              <select name="contactForm">
+                <option value="">Select one</option>
+                <option>Yes</option>
+                <option>No</option>
+              </select>
+            </label>
+            <label>
+              Booking or scheduling?
+              <select name="booking">
+                <option value="">Select one</option>
+                <option>Email</option>
+                <option>WhatsApp</option>
+                <option>Calendar booking</option>
+                <option>No booking needed</option>
+              </select>
+            </label>
+            <label class="span-2">
+              Social media links
+              <textarea name="socialLinks" rows="3" placeholder="Instagram, LinkedIn, Facebook, YouTube, TikTok..."></textarea>
+            </label>
+            <label class="span-2">
+              Other integrations
+              <textarea name="integrations" rows="3" placeholder="Payments, chat widget, analytics, newsletter, CRM, login, admin dashboard..."></textarea>
+            </label>
+            <label class="span-2">
+              Accounts or access available
+              <textarea name="access" rows="3" placeholder="Domain registrar, hosting, email, analytics, social accounts, payment keys. Do not paste passwords here."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="6" aria-labelledby="step-timeline">
+          <span class="step-count">07 / 08</span>
+          <h2 id="step-timeline">Timeline and budget</h2>
+          <div class="field-grid two">
+            <label>
+              Desired launch date
+              <input type="text" name="launchDate" placeholder="Date, weekend, or month" />
+            </label>
+            <label>
+              Hard deadline?
+              <input type="text" name="hardDeadline" placeholder="Event date, campaign date, etc." />
+            </label>
+            <label>
+              Agreed budget
+              <input type="text" name="budget" placeholder="₦ amount or range" />
+            </label>
+            <label>
+              Deposit paid?
+              <select name="depositPaid">
+                <option value="">Select one</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Pending</option>
+              </select>
+            </label>
+            <label class="span-2">
+              Payment plan
+              <textarea name="paymentPlan" rows="3" placeholder="If yes, describe the payment structure."></textarea>
+            </label>
+            <label class="span-2">
+              Who approves final decisions?
+              <input type="text" name="decisionMaker" placeholder="Name or role of final decision maker" />
+            </label>
+          </div>
+        </section>
+
+        <section class="intake-step" data-step="7" aria-labelledby="step-notes">
+          <span class="step-count">08 / 08</span>
+          <h2 id="step-notes">Additional notes and sign-off</h2>
+          <div class="field-grid two">
+            <label class="span-2">
+              Special requests
+              <textarea name="specialRequests" rows="4" placeholder="Anything specific not covered above."></textarea>
+            </label>
+            <label class="span-2">
+              Files to be provided
+              <textarea name="files" rows="4" placeholder="Paste Google Drive links for photos, logos, copy docs, CV, videos, testimonials, product images, and other project files."></textarea>
+            </label>
+            <label>
+              Client signature
+              <input type="text" name="signature" placeholder="Type your full name" required />
+            </label>
+            <label>
+              Sign-off date
+              <input type="date" name="signoffDate" />
+            </label>
+          </div>
+          <label class="consent-row">
+            <input type="checkbox" name="consent" value="Yes" required />
+            I confirm this information is accurate enough for Ayodev.tech to prepare project scope and next steps.
+          </label>
+        </section>
+
+        <div class="intake-actions">
+          <button class="ghost-button" type="button" data-prev-step>Back</button>
+          <button class="form-cta" type="button" data-next-step>Next section</button>
+          <button class="form-cta submit-intake" type="submit" hidden>Submit intake</button>
+        </div>
+        <p class="form-status" data-intake-status role="status" aria-live="polite"></p>
+      </form>
+    </main>
+
+    <script>
+      (() => {
+        const form = document.querySelector("[data-intake-form]");
+        if (!form) return;
+
+        const steps = Array.from(form.querySelectorAll("[data-step]"));
+        const stepItems = Array.from(document.querySelectorAll("[data-step-list] li"));
+        const previous = form.querySelector("[data-prev-step]");
+        const next = form.querySelector("[data-next-step]");
+        const submit = form.querySelector(".submit-intake");
+        const status = form.querySelector("[data-intake-status]");
+        const storageKey = "ayodev-intake-draft";
+        let activeStep = 0;
+
+        const setStep = (index) => {
+          activeStep = Math.max(0, Math.min(index, steps.length - 1));
+          steps.forEach((step, stepIndex) => step.classList.toggle("active", stepIndex === activeStep));
+          stepItems.forEach((item, itemIndex) => {
+            item.classList.toggle("active", itemIndex === activeStep);
+            item.classList.toggle("done", itemIndex < activeStep);
+          });
+          previous.disabled = activeStep === 0;
+          next.hidden = activeStep === steps.length - 1;
+          submit.hidden = activeStep !== steps.length - 1;
+          status.textContent = "";
+          steps[activeStep].querySelector("input, select, textarea")?.focus({ preventScroll: true });
+        };
+
+        const getPayload = () => {
+          const payload = {};
+          const data = new FormData(form);
+          for (const [key, value] of data.entries()) {
+            if (key === "website") continue;
+            if (payload[key]) {
+              payload[key] = Array.isArray(payload[key]) ? [...payload[key], value] : [payload[key], value];
+            } else {
+              payload[key] = value;
+            }
+          }
+          return payload;
+        };
+
+        const saveDraft = () => {
+          window.localStorage.setItem(storageKey, JSON.stringify(getPayload()));
+        };
+
+        const restoreDraft = () => {
+          const raw = window.localStorage.getItem(storageKey);
+          if (!raw) return;
+          const draft = JSON.parse(raw);
+          Object.entries(draft).forEach(([key, value]) => {
+            const values = Array.isArray(value) ? value : [value];
+            values.forEach((item) => {
+              const field = form.querySelector(`[name="${CSS.escape(key)}"][value="${CSS.escape(item)}"]`) || form.querySelector(`[name="${CSS.escape(key)}"]`);
+              if (!field) return;
+              if (field.type === "checkbox" || field.type === "radio") {
+                field.checked = true;
+              } else {
+                field.value = item;
+              }
+            });
+          });
+        };
+
+        const validateStep = () => {
+          const fields = Array.from(steps[activeStep].querySelectorAll("input, select, textarea"));
+          return fields.every((field) => field.reportValidity());
+        };
+
+        previous.addEventListener("click", () => setStep(activeStep - 1));
+        next.addEventListener("click", () => {
+          if (!validateStep()) return;
+          saveDraft();
+          setStep(activeStep + 1);
+        });
+
+        form.addEventListener("input", saveDraft);
+        form.addEventListener("change", saveDraft);
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          if (!validateStep()) return;
+
+          submit.disabled = true;
+          status.textContent = "Submitting your intake...";
+
+          try {
+            const response = await fetch("/api/intake", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ ...getPayload(), website: form.website.value })
+            });
+            const result = await response.json().catch(() => ({}));
+            if (!response.ok) {
+              throw new Error(result.error || "Unable to submit the intake form right now.");
+            }
+            window.localStorage.removeItem(storageKey);
+            form.reset();
+            setStep(0);
+            status.textContent = "Submitted. A confirmation email has been sent.";
+          } catch (error) {
+            status.textContent = error.message || "Unable to submit the intake form right now.";
+          } finally {
+            submit.disabled = false;
+          }
+        });
+
+        restoreDraft();
+        setStep(0);
+      })();
+    </script>
+  </body>
+</html>
