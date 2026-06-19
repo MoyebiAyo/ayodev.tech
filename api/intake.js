@@ -1,5 +1,6 @@
 const OWNER_EMAIL = "me@ayodev.tech";
 const FROM_EMAIL = "Ayodev.tech <amin@ayodev.tech>";
+const { detailRow, detailTable, renderEmail } = require("./email-template");
 
 const labels = {
   date: "Date",
@@ -136,7 +137,7 @@ module.exports = async (req, res) => {
       const value = normalizeValue(body[key]);
       if (!value) return "";
       const safeValue = escapeHtml(value).replace(/\n/g, "<br />");
-      return `<tr><th align="left" valign="top" style="padding:8px 12px;border-bottom:1px solid #eceff3;">${escapeHtml(label)}</th><td valign="top" style="padding:8px 12px;border-bottom:1px solid #eceff3;">${safeValue}</td></tr>`;
+      return detailRow(escapeHtml(label), safeValue);
     })
     .filter(Boolean)
     .join("");
@@ -149,19 +150,24 @@ module.exports = async (req, res) => {
     .filter(Boolean)
     .join("\n");
 
-  const ownerHtml = `
-    <h2>New Ayodev.tech client intake</h2>
-    <p><strong>${escapeHtml(clientName)}</strong> submitted an intake form for <strong>${escapeHtml(brandName)}</strong>.</p>
-    <table cellpadding="0" cellspacing="0" style="border-collapse:collapse;width:100%;font-family:Arial,sans-serif;font-size:14px;">
-      ${rows}
-    </table>
-  `;
+  const ownerHtml = renderEmail({
+    eyebrow: "Client intake",
+    title: "A new intake form was submitted.",
+    lead: `<strong>${escapeHtml(clientName)}</strong> submitted project details for <strong>${escapeHtml(brandName)}</strong>.`,
+    children: detailTable(rows)
+  });
 
-  const confirmationHtml = `
-    <h2>Thanks, ${escapeHtml(clientName)}.</h2>
-    <p>Ayodev.tech has received your client intake form for <strong>${escapeHtml(brandName)}</strong>.</p>
-    <p>I will review your details and follow up with the next step.</p>
-  `;
+  const confirmationHtml = renderEmail({
+    eyebrow: "Intake received",
+    title: `Thanks, ${escapeHtml(clientName)}.`,
+    lead: `Ayodev.tech has received your client intake form for <strong>${escapeHtml(brandName)}</strong>.`,
+    children: `
+      <div style="padding:18px;border:1px solid #e7e4df;border-radius:14px;background:#fbfbfa;">
+        <p style="margin:0;color:#07122c;font-size:15px;line-height:1.65;">I will review your details and follow up with the next best step.</p>
+      </div>
+    `,
+    footer: "Your project details are in. Ayodev.tech"
+  });
 
   try {
     await Promise.all([

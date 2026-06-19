@@ -1,5 +1,6 @@
 const OWNER_EMAIL = "me@ayodev.tech";
 const FROM_EMAIL = "Ayodele <amin@ayodev.tech>";
+const { detailRow, detailTable, messageBlock, renderEmail } = require("./email-template");
 
 const escapeHtml = (value = "") =>
   String(value)
@@ -60,22 +61,27 @@ module.exports = async (req, res) => {
   const safePackage = escapeHtml(cleanPackage);
   const safeMessage = escapeHtml(cleanMessage).replace(/\n/g, "<br />");
 
-  const ownerHtml = `
-    <h2>New hire request from ayodev.tech</h2>
-    <p><strong>Name:</strong> ${safeName}</p>
-    <p><strong>Email:</strong> ${safeEmail}</p>
-    <p><strong>Package:</strong> ${safePackage}</p>
-    <p><strong>Project details:</strong></p>
-    <p>${safeMessage}</p>
-  `;
+  const ownerHtml = renderEmail({
+    eyebrow: "New project brief",
+    title: "A new hire request just came in.",
+    lead: `${safeName} is interested in the ${safePackage} package.`,
+    children: `
+      ${detailTable(`
+        ${detailRow("Name", safeName)}
+        ${detailRow("Email", safeEmail)}
+        ${detailRow("Package", safePackage)}
+      `)}
+      ${messageBlock(`<strong style="display:block;margin-bottom:8px;color:#272523;">Project details</strong>${safeMessage}`)}
+    `
+  });
 
-  const confirmationHtml = `
-    <h2>Thanks for reaching out, ${safeName}.</h2>
-    <p>I received your project brief for the <strong>${safePackage}</strong> package.</p>
-    <p>I will review the details and reply with the next best step.</p>
-    <p><strong>Your message:</strong></p>
-    <p>${safeMessage}</p>
-  `;
+  const confirmationHtml = renderEmail({
+    eyebrow: "Brief received",
+    title: `Thanks for reaching out, ${safeName}.`,
+    lead: `I received your project brief for the <strong>${safePackage}</strong> package and will review it carefully.`,
+    children: messageBlock(`<strong style="display:block;margin-bottom:8px;color:#272523;">Your message</strong>${safeMessage}`),
+    footer: "I will reply with the next best step. Ayodev.tech"
+  });
 
   try {
     await Promise.all([
