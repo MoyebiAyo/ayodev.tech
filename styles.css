@@ -259,7 +259,8 @@ footer div img {
 
 .trust-pill:focus-visible,
 .testimonial-close:focus-visible,
-.testimonial-avatar-rail button:focus-visible {
+.testimonial-avatar-rail button:focus-visible,
+.testimonial-controls button:focus-visible {
   outline: 3px solid rgba(15, 118, 110, 0.35);
   outline-offset: 3px;
 }
@@ -391,15 +392,23 @@ footer div img {
   display: flex;
   align-items: center;
   gap: 9px;
+  max-width: 100%;
+  overflow-x: auto;
   padding: 6px 10px 6px 6px;
   border: 1px solid rgba(255, 255, 255, 0.68);
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.46);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72);
+  scrollbar-width: none;
+}
+
+.testimonial-avatar-rail::-webkit-scrollbar {
+  display: none;
 }
 
 .testimonial-avatar-rail button,
-.testimonial-close {
+.testimonial-close,
+.testimonial-controls button {
   border: 0;
   cursor: pointer;
   font: inherit;
@@ -407,6 +416,7 @@ footer div img {
 
 .testimonial-avatar-rail button {
   position: relative;
+  flex: 0 0 auto;
   width: 50px;
   height: 50px;
   padding: 0;
@@ -462,10 +472,38 @@ footer div img {
   transform: rotate(6deg) scale(1.04);
 }
 
+.testimonial-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: -8px 0 14px;
+}
+
+.testimonial-controls button {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(32, 32, 32, 0.08);
+  color: #292622;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.testimonial-controls button:hover {
+  background: rgba(15, 118, 110, 0.12);
+  color: #0f766e;
+  transform: translateY(-1px);
+}
+
 .testimonial-stage {
   position: relative;
+  height: var(--testimonial-stage-height, 350px);
   min-height: 350px;
   text-align: left;
+  transition: height 260ms ease;
 }
 
 .testimonial-stage article {
@@ -473,6 +511,7 @@ footer div img {
   inset: 0;
   padding: 6px 4px 18px;
   opacity: 0;
+  overflow: visible;
   pointer-events: none;
   transform: translateY(18px) scale(0.98);
   transition:
