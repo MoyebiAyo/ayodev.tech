@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="robots" content="noindex, nofollow" />
+    <meta name="robots" content="noindex, follow" />
     <meta name="theme-color" content="#f4f4f2" />
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
@@ -11,15 +11,61 @@
     <link rel="stylesheet" href="styles.css?v=intake-form" />
   </head>
   <body class="intake-page">
-    <header class="intake-header">
-      <a class="brand" href="/" aria-label="Ayodev.tech home">
-        <img src="assets/ayodele-personal-logo.png" alt="ayodev.tech logo" />
+    <header class="site-nav" aria-label="Primary navigation">
+      <a class="brand" href="/" aria-label="Ayodele home">
+        <img src="/assets/ayodele-personal-logo.png" alt="ayodev.tech logo" />
         <span>ayodev.tech</span>
       </a>
-      <a class="intake-header-link" href="/">Back to site</a>
+      <nav aria-label="Page menu shortcut"></nav>
+      <div class="nav-actions" aria-label="Social and page links">
+        <div class="nav-menu" data-nav-menu>
+          <button class="hamburger-button" type="button" aria-label="Open page menu" aria-expanded="false" aria-controls="page-menu" data-menu-toggle>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+          <div class="page-menu" id="page-menu" hidden data-menu-panel>
+            <div>
+              <b>Main</b>
+              <a href="/">Home</a>
+              <a href="/#about">About</a>
+              <a href="/#services">Services</a>
+              <a href="/#projects">Projects</a>
+              <a href="/#showcase">Project showcase</a>
+              <a href="/#pricing">Pricing</a>
+              <a href="/#hire">Hire</a>
+            </div>
+            <div>
+              <b>Services</b>
+              <a href="/website-design-nigeria/">Website design in Nigeria</a>
+              <a href="/portfolio-website-design/">Portfolio website design</a>
+              <a href="/business-website-design/">Business website design</a>
+              <a href="/web-app-development/">Web app development</a>
+              <a href="/ai-product-development/">AI product development</a>
+            </div>
+            <div>
+              <b>Projects</b>
+              <a href="/projects/eventpass/">EventPass</a>
+              <a href="/projects/zahthic/">Zahthic Healthcare</a>
+              <a href="/projects/philsanconstruct/">Philsan Construct</a>
+            </div>
+            <div>
+              <b>Guides</b>
+              <a href="/guides/website-cost-nigeria/">Website cost in Nigeria</a>
+              <a href="/guides/portfolio-website-checklist/">Portfolio website checklist</a>
+              <a href="/guides/website-vs-web-app/">Website vs web app</a>
+              <a href="/guides/hiring-website-designer/">Hiring a website designer</a>
+              <a href="/intake.html">Project intake</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/MoyebiAyo" aria-label="GitHub"><img src="/assets/logos/github.svg" alt="GitHub logo" /></a>
+        <a href="https://web.facebook.com/moyebi.ayodele/" aria-label="Facebook"><img src="/assets/logos/facebook.svg" alt="Facebook logo" /></a>
+        <a href="https://www.instagram.com/ayothedesigner_/" aria-label="Instagram"><img src="/assets/logos/instagram.svg" alt="Instagram logo" /></a>
+      </div>
     </header>
 
-    <main class="intake-shell">
+    <main id="top" class="intake-shell">
       <aside class="intake-progress" aria-label="Form progress">
         <p class="price-kicker">Client intake</p>
         <h1>Tell me about your website project.</h1>
@@ -388,6 +434,19 @@
       </form>
     </main>
 
+    <footer id="footer">
+      <img src="/assets/ayodele-personal-logo.png" alt="ayodev.tech logo" />
+      <h2>Where clean code meets meaningful African products.</h2>
+      <div>
+        <a href="https://github.com/MoyebiAyo" aria-label="GitHub"><img src="/assets/logos/github.svg" alt="GitHub logo" /></a>
+        <a href="https://web.facebook.com/moyebi.ayodele/" aria-label="Facebook"><img src="/assets/logos/facebook.svg" alt="Facebook logo" /></a>
+        <a href="https://www.instagram.com/ayothedesigner_/" aria-label="Instagram"><img src="/assets/logos/instagram.svg" alt="Instagram logo" /></a>
+      </div>
+      <p>© 2026 Moyebi Ayodele. All rights reserved.</p>
+      <strong aria-hidden="true">Ayodele</strong>
+      <a class="to-top" href="#top" aria-label="Back to top"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 15 6-6 6 6" /></svg></a>
+    </footer>
+
     <script>
       (() => {
         const form = document.querySelector("[data-intake-form]");
@@ -499,5 +558,7 @@
         setStep(0);
       })();
     </script>
+
+<script src="/assets/site-menu.js"></script>
   </body>
 </html>
